@@ -17,9 +17,9 @@ angular.module('webApp').service('delegateService', function ($http, $filter) {
     function transformData(data, filter, params) {
         return sliceData(orderData(filterData(data, filter), params), params);
     }
-
+// heyj 101 to 3
     var delegates = {
-        topRate: 101,
+        topRate: 3,
         gettingStandBy: false,
         gettingTop: false,
         gettingVoted: false,

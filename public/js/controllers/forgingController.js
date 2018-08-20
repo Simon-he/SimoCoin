@@ -4,6 +4,8 @@ require('angular');
 angular.module('webApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "companyModal", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService",
     function ($rootScope, $scope, $http, userService, $interval, companyModal, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService) {
         $scope.toggled = true;
+        // heyj comment
+        //$scope.allVotes = 100;
         $scope.allVotes = 100
             * 1000
             * 1000
@@ -48,7 +50,7 @@ angular.module('webApp').controller('forgingController', ['$scope', '$rootScope'
             },
             rank: {
                 labels: ['Others', 'Rank'],
-                values: [0, 100],
+                values: [0, 2],
                 colours: ['#90a4ae', '#f5f5f5'],
                 options: {
                     responsive: true,
@@ -137,17 +139,20 @@ angular.module('webApp').controller('forgingController', ['$scope', '$rootScope'
 
         $scope.updateGraphs = function () {
             delegateService.getDelegate(userService.publicKey, function (response) {
-                var totalDelegates = 108;
+                // heyj comment 108 to 4
+                var totalDelegates = 4;
                 var rank = response.rate;
                 if (!rank || rank == 0) {
-                    $scope.graphs.rank.values = [0, 100];
+                    //heyj comment 100 to 2
+                    $scope.graphs.rank.values = [0, 2];
                 }
                 else {
                     $scope.graphs.rank.values = [totalDelegates - rank, totalDelegates - 1 - (totalDelegates - rank) == -1 ? 0 : totalDelegates - 1 - (totalDelegates - rank)];
                 }
 
-                if (($scope.rank == 0 && rank != 0) || ($scope.rank > 50 && rank <= 50) || ($scope.rank > 101 && rank <= 101) || ($scope.rank <= 50 && rank > 50)) {
-                    $scope.graphs.rank.colours = [rank <= 50 ? '#7cb342' : (rank > 101 ? '#d32f2f' : '#ffa000'), '#f5f5f5'];
+// heyj comment 50 to 1,101 to 3
+                if (($scope.rank == 0 && rank != 0) || ($scope.rank > 1 && rank <= 1) || ($scope.rank > 3 && rank <= 3) || ($scope.rank <= 1 && rank > 1)) {
+                    $scope.graphs.rank.colours = [rank <= 1 ? '#7cb342' : (rank > 3 ? '#d32f2f' : '#ffa000'), '#f5f5f5'];
                 }
 
                 $scope.rank = rank;
@@ -162,10 +167,10 @@ angular.module('webApp').controller('forgingController', ['$scope', '$rootScope'
                 $scope.uptime = response.productivity || 0;
 
                 var approval = $scope.getApproval(response.vote);
-
+// heyj comment 95 to 2,50 to 1
                 $scope.graphs.approval.values = [approval, $scope.getApproval($scope.allVotes) - approval];
-                if (($scope.approval == 0 && approval > 0) || ($scope.approval >= 95 && approval < 95) || ($scope.approval >= 50 && approval < 50)) {
-                    $scope.graphs.approval.colours = [approval >= 95 ? '#7cb342' : (approval >= 50 ? '#ffa000' : '#d32f2f'), '#f5f5f5'];
+                if (($scope.approval == 0 && approval > 0) || ($scope.approval >= 2 && approval < 2) || ($scope.approval >= 1 && approval < 1)) {
+                    $scope.graphs.approval.colours = [approval >= 2 ? '#7cb342' : (approval >= 1 ? '#ffa000' : '#d32f2f'), '#f5f5f5'];
                 }
                 $scope.approval = approval;
 

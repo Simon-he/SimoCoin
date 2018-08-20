@@ -18,12 +18,12 @@ function getEpochTime(time) {
 	var t = d.getTime();
 	return Math.floor((time - t) / 1000);
 }
-
+// heyj 101 to 3
 module.exports = {
 
 	interval: 10,
 
-	delegates: 101,
+	delegates: 3,
 
 	getTime: function (time) {
 		return getEpochTime(time);

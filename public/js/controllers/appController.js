@@ -113,24 +113,26 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
 
 
         $scope.getUSDPrice = function () {
-            $http.get("//146.148.61.64:4060/api/1/ticker/XCR_BTC")
-                .then(function (response) {
-                    var xcr_btc = response.data.last;
-                    $http.get("//146.148.61.64:4060/api/1/ticker/BTC_USD")
-                        .then(function (response) {
-                            $scope.xcr_usd = xcr_btc * response.data.last;
-                        });
-                });
+            // heyj comment call
+            // $http.get("//146.148.61.64:4060/api/1/ticker/XCR_BTC")
+            //     .then(function (response) {
+            //         var xcr_btc = response.data.last;
+            //         $http.get("//146.148.61.64:4060/api/1/ticker/BTC_USD")
+            //             .then(function (response) {
+            //                 $scope.xcr_usd = xcr_btc * response.data.last;
+            //             });
+            //     });
         };
 
         $scope.getVersion = function () {
             $http.get("/api/peers/version").then(function (response) {
                 if (response.data.success) {
                     $scope.version = response.data.version;
-                    $http.get("https://wallet.crypti.me/api/peers/version").then(function (response) {
-                        $scope.latest = response.data.version;
-                        $scope.diffVersion = compareVersion($scope.version, $scope.latest);
-                    });
+                    // heyj comment call
+                    // $http.get("https://wallet.crypti.me/api/peers/version").then(function (response) {
+                    //     $scope.latest = response.data.version;
+                    //     $scope.diffVersion = compareVersion($scope.version, $scope.latest);
+                    // });
                 }
                 else {
                     $scope.diffVersion = -1;

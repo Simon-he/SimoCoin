@@ -969,7 +969,7 @@ shared.getVoters = function (req, cb) {
 		});
 	});
 }
-
+// heyj 101 to 3
 shared.getDelegates = function (req, cb) {
 	var query = req.body;
 	library.scheme.validate(query, {
@@ -978,7 +978,7 @@ shared.getDelegates = function (req, cb) {
 			limit: {
 				type: "integer",
 				minimum: 0,
-				maximum: 101
+				maximum: 3
 			},
 			offset: {
 				type: "integer",
@@ -1003,13 +1003,13 @@ shared.getDelegates = function (req, cb) {
 				return cb(err.toString());
 			}
 
-			var limit = query.limit || 101,
+			var limit = query.limit || 3,
 				offset = query.offset || 0,
 				orderField = query.orderBy,
 				active = query.active;
 
 			orderField = orderField ? orderField.split(':') : null;
-			limit = limit > 101 ? 101 : limit;
+			limit = limit > 3 ? 3 : limit;
 			var orderBy = orderField ? orderField[0] : null;
 			var sortMode = orderField && orderField.length == 2 ? orderField[1] : 'asc';
 			var count = delegates.length;

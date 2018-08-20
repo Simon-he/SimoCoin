@@ -189,7 +189,8 @@ d.run(function () {
       });
 
       z_schema.registerFormat('listDelegates', function (obj) {
-        obj.limit = 101;
+        // Heyj comment 101 to 3
+        obj.limit = 3;
         return true;
       });
 

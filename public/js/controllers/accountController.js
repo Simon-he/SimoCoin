@@ -127,16 +127,17 @@ angular.module('webApp').controller('accountController', ['$state','$scope', '$r
         }
 
         $scope.getPrice = function () {
-            $http.get(" http://146.148.61.64:4060/api/1/trade/XCR_BTC")
-                .then(function (response) {
-                    $scope.graphs.cryptiPrice.data = [
-                        response.data.data.map(
-                            function (line) {
-                                return line.price
-                            })
-                    ];
+            // heyj comment service call
+            // $http.get(" http://146.148.61.64:4060/api/1/trade/XCR_BTC")
+            //     .then(function (response) {
+            //         $scope.graphs.cryptiPrice.data = [
+            //             response.data.data.map(
+            //                 function (line) {
+            //                     return line.price
+            //                 })
+            //         ];
 
-                });
+            //     });
 
         }
 
