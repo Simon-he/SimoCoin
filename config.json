@@ -1,0 +1,59 @@
+{
+    "port": 8090,
+    "address": "0.0.0.0",
+    "serveHttpAPI": true,
+    "serveHttpWallet": true,
+    "version": "0.5.3",
+    "fileLogLevel": "info",
+    "consoleLogLevel": "log",
+    "sharePort": true,
+    "api": {
+        "access": {
+            "whiteList": []
+        }
+    },
+    "peers": {
+        "list": [
+            {
+                "ip": "192.168.0.109",
+                "port": 8090
+            }
+        ],
+        "blackList": [],
+        "options": {
+            "timeout": 4000
+        }
+    },
+    "forging": {
+        "secret": [],
+        "access": {
+            "whiteList": [
+                "127.0.0.1"
+            ]
+        }
+    },
+    "loading": {
+        "verifyOnLoading": false,
+        "loadPerIteration": 5000
+    },
+    "sia": {
+        "peer": {
+            "ip": "127.0.0.1",
+            "port": 9980
+        }
+    },
+    "ssl": {
+        "enabled": false,
+        "options": {
+            "port": 443,
+            "address": "0.0.0.0",
+            "key": "./ssl/simoCoin.key",
+            "cert": "./ssl/simoCoin.crt"
+        }
+    },
+    "dapp": {
+        "masterrequired": true,
+        "masterpassword": "gVE5nu3FjBtc",
+        "autoexec": []
+    }
+}
