@@ -176,8 +176,9 @@ Round.prototype.tick = function (block, cb) {
 	var nextRound = self.calc(block.height + 1);
 
 	//console.log(block.height, round, nextRound);
+	// heyj 101 to 3
 	if (round !== nextRound || block.height == 1) {
-		if (private.delegatesByRound[round].length == slots.delegates || block.height == 1 || block.height == 101) {
+		if (private.delegatesByRound[round].length == slots.delegates || block.height == 1 || block.height == 3) {
 			if (block.height != 1) {
 				var roundDelegates = modules.delegates.generateDelegateList(block.height);
 				roundDelegates.forEach(function (delegate) {
