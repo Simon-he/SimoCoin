@@ -1,16 +1,16 @@
-### Crypti ###
+### SimoCoin ###
 
-Crypti is a decentralized application (Dapp) platform and cryptocurrency.  
+SimoCoin is a decentralized application (Dapp) platform and cryptocurrency which folked from Crypti project.  
 
-Crypti provides a full stack solution for deploying truly decentralized applications onto the blockchain. While also providing an excellent user experience for anyone looking to make safe & easy transactions within seconds.  
+SimoCoin provides a full stack solution for deploying truly decentralized applications onto the blockchain. While also providing an excellent user experience for anyone looking to make safe & easy transactions within seconds.  
 
-Crypti's very own Dapp store gives consumers the same if not superior interface consumers have come to expect from existing centralized solutions currently dominating the market.  
+SimoCoin's very own Dapp store gives consumers the same if not superior interface consumers have come to expect from existing centralized solutions currently dominating the market.  
 
-Each Dapp operates on a separate custom sidechain secured by Crypti's own tried and tested version of the Delegated Proof of Stake consensus model.  
+Each Dapp operates on a separate custom sidechain secured by SimoCoin's own tried and tested version of the Delegated Proof of Stake consensus model.  
 
-For the progressive startup looking for the perfect platform on which to launch their first Dapp. Crypti is by far the quickest to deploy and most democratic solution currently in existence.  
+For the progressive startup looking for the perfect platform on which to launch their first Dapp. SimoCoin is by far the quickest to deploy and most democratic solution currently in existence.  
 
-Further development of the core protocol is maintained by the Crypti Foundation. A dedicated team of developers, entrepreneurs and engineers from across the globe.  
+Further development of the core protocol is maintained by the SimoCoin Foundation. A dedicated team of developers, entrepreneurs and engineers from across the globe.  
 
 Requires:
 
@@ -64,7 +64,7 @@ mocha
 
 ## Start
 
-Go to the Crypti folder and run:
+Go to the SimoCoin folder and run:
 
 ```sh
 node app.js
@@ -78,8 +78,8 @@ If you happen to find any bugs, we are currently [offering good bounties](https:
 
 All source code contributions are welcome. Simply open a pull request with your proposed changes.
 
-Latest mainnet version is `0.5.4` version. 
-Latest developing version is `0.5.5` version.
+Latest mainnet version is `0.0.1` version. 
+Latest developing version is `0.0.1` version.
 
 Each versions exists in two branches: *mainnet* and *testnet*.
 
@@ -104,8 +104,9 @@ To see code guidline, see [guidline document](guidline.md).
 ## License 
 
 The MIT License (MIT)
-
 Copyright (c) 2015 Crypti
+
+Copyright (c) 2018 SimoCoin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

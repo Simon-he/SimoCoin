@@ -1,9 +1,9 @@
 {
 	"name": "Crypti",
-	"version": "0.5.3",
+	"version": "0.0.1",
 	"private": true,
 	"bin": {
-		"crypti": "./crypti"
+		"simoCoin": "./simoCoin"
 	},
 	"scripts": {
 		"start": "node app.js",
